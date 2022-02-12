@@ -1,0 +1,254 @@
+area of triangle 
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a,b,c;
+            Console.WriteLine("Enter 3 sides of triangle");
+            a= double.Parse(Console.ReadLine());
+            b= double.Parse(Console.ReadLine());
+            c = double.Parse(Console.ReadLine());
+            
+       
+            double s= a+b+c/2;
+            double area = Math.Sqrt(s*(s - a) * (s - b) * (s - c));
+            Console.WriteLine("s value is" +s);
+          
+            Console.WriteLine("area=" +area);
+        }
+3.chat data type:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char ch;
+            Console.WriteLine("Enter a char data");
+            ch= char.Parse(Console.ReadLine());
+
+            if (ch >= 'A' && ch <= 'Z')
+
+                Console.WriteLine("char is captial-alphabet" + ch);
+            else if (ch >= 'a' && ch <= 'z')
+                Console.WriteLine("char is samll-alphabet" + ch);
+            else if (ch >= '0' && ch <= '9')
+                Console.WriteLine("char is number" + ch);
+            else
+                Console.WriteLine(" char is special" + ch);
+        }
+    }
+}
+4.vowel/consonant program:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char ch;
+            Console.WriteLine("Enter an alphabet");
+            ch= char.Parse(Console.ReadLine());
+
+            if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' || ch == 'a' ||
+                ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+
+                Console.WriteLine("char is vowel" + ch);
+            else
+                Console.WriteLine("char is consonant" + ch);
+               
+        }
+    }
+5.largeset of 3 numbers
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n1, n2, n3;
+            Console.WriteLine("Enter 3 numbers");
+            n1 = int.Parse(Console.ReadLine());
+            n2 = int.Parse(Console.ReadLine());
+            n3 = int.Parse(Console.ReadLine());
+
+            if ((n1 >= n2) && (n1 >= n3))
+                Console.WriteLine("largest number" + n1);
+            else if ((n2 >= n3))
+                Console.WriteLine("largest number" + n2);
+            else
+                Console.WriteLine("largest number" + n3);
+                
+        }
+    }
+}
+sum/-/+/*// program:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char choice;
+            int n1,n2;
+            Console.WriteLine("Enter the coice[+/-/*//]");
+            Console.WriteLine("Enter the 2 numbers");
+            choice = char.Parse(Console.ReadLine());
+            n1 =int.Parse(Console.ReadLine());
+            n2 = int.Parse(Console.ReadLine());
+           
+            switch(choice)
+            {
+                case '+':
+                
+                    int n3 = n1 + n2;
+                    Console.WriteLine("sum of the num" + n3);
+                    break;
+                case '-':
+                    int n4 = n1 - n2;
+                    Console.WriteLine("diff of the number", + n4);                 
+                    break;
+                case '*':
+                    int n5 = n1 * n2;
+                    Console.WriteLine("mul of the number", + n5);
+                    break;
+                case '/':
+                    int n6 = n1 / n2;
+                    Console.WriteLine("div of the number", +n6);
+                    break;
+            }       
+        }
+    }
+}
+multiplication of a table using for loop
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n;          
+            Console.WriteLine("Enter the n numbers");            
+            n =int.Parse(Console.ReadLine());
+           
+            for(int i=1; i<=10;i++)
+            {
+                
+                Console.WriteLine(n+ "*" +i +" = " +(n*i));
+            }       
+        }
+    }
+}
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int []a =new int[5] { 10, 20, 30, 40, 50 };
+            int[] b = new int[4];
+            int[] c = new int[] { 100, 200, 300, 400, 500 };
+         
+
+            for (int i = 0; i <= a.Length; i++)
+            {
+                Console.WriteLine("a[" + i + "]=" + a[i]);
+            }
+            Console.WriteLine("enter the array elements for b");
+            for (int i=0;i<b.Length;i++)
+            {
+                b[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("array elements of b");
+            for(int i=0;i<b.Length;i++)
+            {
+                Console.WriteLine("b[" + i + "]=" + b[i]);
+            }
+            
+
+
+
+        }
+    }
+}
+object can store any time data.
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            object[] course = new object[] { 1, "c#.net", 5600.00, 2, "sql" };
+            foreach(var i in course)
+            {
+                Console.WriteLine(i);
+            }
+            
+
+
+
+        }
+    }
+}
+..
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] course = new string[] { "1", "c#.net", "5600.00","2" , "sql" };
+            foreach(string i in course)
+            {
+                Console.WriteLine(i);
+            }
+            
+
+
+
+        }
+    }
+}
+.....
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] array1 = new int[2, 2];
+            int[,] array2 = new int[2, 2] { { 10, 20 }, { 30, 40 } };
+            for(int i=0;i<2;i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    //Console.Write(array2[i, j] + "\t");
+                    Console.Write("array2[" + i + "," + j + "]=" + array2[i, j] + " \t ");
+                }
+            }
+
+        }
+    }
+}
